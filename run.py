@@ -1,15 +1,11 @@
 #!/usr/bin/env python2
+#-*- coding: utf8 -*-
 
 import os
 import sys
 
-import flask
-app = flask.Flask(__name__)
+from coum import coum
 
-@app.route('/')
-def hello_world():
-    return '<h1>coum<h1> \
-           <h3>image cartoonizer<h1>'
+coum.debug=True
+coum.run()
 
-if __name__ == "__main__":
-    app.run()
