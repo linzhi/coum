@@ -1,42 +1,43 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+<head>
   <meta http-equiv='content-type' value='text/html; charset=utf8'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <link rel="stylesheet" href="../static/css/index.css"/>
   <link rel="icon" href="../static/favicon.ico" mce_href="../static/favicon.ico" type="image/x-icon">
+
 
   {% if title %}
   <title>{{ title }} - linzhi</title>
   {% else %}
   <title>cartooning - linzhi</title>
   {% endif %}
-  </head>
-  
-  <body>
-    <div id="container">
+</head>
+<body>
+  <div id="container">
     <header>
-      <div id="title" title="nothing">
-        coum
-      </div>
-      <div id="subtitle">
-        Image Cartooning
-      </div>
+      <div id="title" title="nothing">coum</div>
+      <div id="subtitle">Image Cartooning</div>
     </header>
     <div id="viewer-container">
-      <div id="viewer">
+      <div id="viewer-l">
         <div id="droparea-text">
-          Drag an image here to cartooning.
+          Drag image here to cartooning
         </div>
         <canvas id="preview">
         </canvas>
         <canvas id="annotations">
         </canvas>
       </div>
-
-      <div id="example-chooser">
-        <div id="thumbs">
-          <img class="example-thumb" src="../static/imgs/1.png"></img>
+          
+      <div id="viewer-r">
+        <div id="droparea-text">
+          Display image cartooning result
         </div>
+        <canvas id="preview">
+        </canvas>
+        <canvas id="annotations">
+        </canvas>
       </div>
     </div>
   </div>
@@ -48,9 +49,14 @@
     <div id="select-button">
       test images
     </div>
+    <div id="example-chooser">
+      <div id="thumbs">
+        <img class="example-thumb" src="../static/imgs/1.png"></img>
+      </div>
+    </div>
   </footer>
   
   <div id="drawing" hidden=true>1</div>
   
-  </body>
+</body>
 </html>
