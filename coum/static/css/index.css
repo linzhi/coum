@@ -18,21 +18,22 @@ body {
 }
 
 #container {
-  position: relative;
   width: 100%;
-  margin: 44px auto 0px auto;
   text-align: center;
+  margin: 44px auto 0px auto;
 }
 
 #viewer-container {
-  position: relative;
+  margin: 50px auto 100px auto;
+  clear: both;
+  zoom: 1;
+  overflow: hidden;
   width: 100%;
-  margin: 50px auto 500px auto;
 }
 
 #viewer-l {
-  position: absolute;
-  left: 10%;
+  float: left;
+  margin-left: 10%;
   width: 450px;
   height: 300px;
   border: 4px dashed #ccc;
@@ -43,8 +44,8 @@ body {
 }
 
 #viewer-r {
-  position: absolute;
-  left: 55%;
+  float: right;
+  margin-right: 10%;
   width: 450px;
   height: 300px;
   border: 4px dashed #ccc;
