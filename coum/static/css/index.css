@@ -67,6 +67,18 @@ body {
   color: #555;
 }
 
+form {
+  margin: 30px auto 0px auto;
+  font: 14px Arial;
+}
+
+#file {
+  text-align: center;
+}
+#submit {
+  text-align: center;
+}
+
 #preview {
   z-index: 1;
   position: absolute;
