@@ -26,20 +26,3 @@ def index():
     except TemplateNotFound:
         abort(404)
 
-@coum.route('/upload', methods=['GET', 'POST'])
-def upload():
-    """upload image by drag"""
-
-    if request.method == 'POST':
-        file = request.files['file']
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(coum.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('index', filename=filename))
-
-'''
-@coum.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(coum.config['UPLOAD_FOLDER'],
-                                               filename)
-'''
